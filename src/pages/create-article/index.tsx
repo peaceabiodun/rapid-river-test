@@ -9,6 +9,7 @@ const CreateArticle = () => {
     email: '',
     phone_number: '',
   });
+  const disableBtn = !formData.snippet || !formData.name || !formData.email || !formData.phone_number;
   const submitForm = async () => {
     setLaoding(true);
     try {
@@ -19,43 +20,43 @@ const CreateArticle = () => {
     }
   };
   return (
-    <div className=' h-full flex flex-col items-center justify-center m-4'>
-      <h2 className='font-semibold text-xl'>Create An Article</h2>
-      <form className='my-6 w-full sm:w-[350px] space-y-4 text-sm md:text-lg'>
-        <div className='flex flex-col gap-2'>
+    <div className=" bg-[#dbdbdbb0] min-h-screen p-4 flex flex-col items-center justify-center ">
+      <h2 className="font-semibold text-xl">Create An Article</h2>
+      <form className="my-6 w-full sm:w-[350px] space-y-4 text-sm md:text-lg">
+        <div className="flex flex-col gap-2">
           <label>Enter Article Snippet</label>
           <textarea
-            placeholder='type here ...'
-            className='border rounded-sm h-[250px] p-2 outline-none '
+            placeholder="type here ..."
+            className="border rounded-sm h-[250px] p-2 outline-none border-[#b9b9b9] bg-transparent "
           />
         </div>
 
-        <div className='flex flex-col gap-2'>
+        <div className="flex flex-col gap-2">
           <label>Authors Name</label>
           <input
-            type='text'
-            placeholder='Scott Turow'
-            className='p-2 outline-none border rounded-sm'
+            type="text"
+            placeholder="Scott Turow"
+            className="p-2 outline-none border rounded-sm border-[#b9b9b9] bg-transparent"
           />
         </div>
-        <div className='flex flex-col gap-2'>
+        <div className="flex flex-col gap-2">
           <label>Authors Email</label>
           <input
-            type='email'
-            placeholder='Scott@gmail.com'
-            className='p-2 outline-none border rounded-sm'
+            type="email"
+            placeholder="Scott@gmail.com"
+            className="p-2 outline-none border rounded-sm border-[#b9b9b9] bg-transparent"
           />
         </div>
 
-        <div className='flex flex-col gap-2'>
+        <div className="flex flex-col gap-2">
           <label>Authors Phone Number</label>
           <input
-            type='tel'
-            placeholder=' +202 588-6500'
-            className='p-2 outline-none border rounded-sm'
+            type="tel"
+            placeholder=" +202 588-6500"
+            className="p-2 outline-none border rounded-sm border-[#b9b9b9] bg-transparent"
           />
         </div>
-        <button className='p-2 border rounded-sm w-full'>
+        <button disabled={disableBtn} className="border border-[#b9b9b9] p-2 text-sm w-full">
           {loading ? 'loading' : 'Submit'}
         </button>
       </form>
