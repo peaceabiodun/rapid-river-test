@@ -7,6 +7,7 @@ import { generateRandomNumber } from '../../utils/function';
 const CreateArticle = () => {
   const navigate = useNavigate();
   const [loading, setLaoding] = useState(false);
+
   const [formData, setFormData] = useState<ArticleFormDataType>({
     name: '',
     email: '',
@@ -53,7 +54,7 @@ const CreateArticle = () => {
                   body: e.target.value,
                 })
               }
-              className="border rounded-sm h-[250px] p-2 outline-none border-[#b9b9b9] bg-transparent "
+              className="border rounded-sm h-[250px] p-2 outline-none shadow-md "
             />
           </div>
 
@@ -69,7 +70,7 @@ const CreateArticle = () => {
                   name: e.target.value,
                 })
               }
-              className="p-2 outline-none border rounded-sm border-[#b9b9b9] bg-transparent"
+              className="p-2 outline-none border rounded-sm shadow-md"
             />
           </div>
           <div className="flex flex-col gap-2">
@@ -84,12 +85,16 @@ const CreateArticle = () => {
                   email: e.target.value,
                 })
               }
-              className="p-2 outline-none border rounded-sm border-[#b9b9b9] bg-transparent"
+              className="p-2 outline-none border rounded-sm shadow-md"
             />
           </div>
           {disableBtn && <div className="text-xs text-red-500 my-3">Please fill in all details</div>}
 
-          <button type="submit" disabled={disableBtn} className="border border-[#b9b9b9] p-2 text-sm w-full">
+          <button
+            type="submit"
+            disabled={disableBtn}
+            className="border bg-red-400  rounded-sm cursor-pointer text-white p-2 text-sm w-full"
+          >
             {loading ? 'Loading...' : 'Submit'}
           </button>
         </form>
