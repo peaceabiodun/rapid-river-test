@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { ArticleType } from '../../utils/types';
 import { useNavigate } from 'react-router-dom';
+import ArticleCards from '../../components/article-card';
 
 const Results = () => {
   const [searchValue, setSearchValue] = useState('');
@@ -13,7 +14,7 @@ const Results = () => {
   const getArticles = async () => {
     setLaoding(true);
     try {
-      const res = await axios.get(`${baseUrl}posts`);
+      const res = await axios.get(`${baseUrl}comments`);
       setArticles(res.data);
     } catch (err: any) {
       console.log(err);
@@ -27,7 +28,7 @@ const Results = () => {
   }, []);
 
   const filteredArticles = searchValue
-    ? articles.filter((article) => article.title.includes(searchValue) || article.body.includes(searchValue))
+    ? articles.filter((article) => article.name.includes(searchValue) || article.body.includes(searchValue))
     : articles;
   return (
     <div className="bg-[#dbdbdbb0] min-h-screen p-4  ">
@@ -51,13 +52,12 @@ const Results = () => {
       {loading ? (
         <div className="mt-6 flex text-sm justify-center ">Loading ...</div>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-6">
-          {filteredArticles.map((item) => (
-            <div key={item.id} className="bg-white p-2 text-sm shadow-md rounded-md">
-              <h3 className="font-semibold">{item.title}</h3>
-              <p>{item.body}</p>
-            </div>
-          ))}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-6">
+          {filteredArticles.length === 0 ? (
+            <div>No Articles Found</div>
+          ) : (
+            filteredArticles.map((item) => <ArticleCards key={item.id} articles={item} />)
+          )}
         </div>
       )}
     </div>

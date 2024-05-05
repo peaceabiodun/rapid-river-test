@@ -1,30 +1,55 @@
-# React + TypeScript + Vite
+## Rapid River Software Frontend Developer Test
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+To start this project, please ensure you have the following installed:
 
-Currently, two official plugins are available:
+- [Node.js](https://nodejs.org/) >= 18.0.0 -[npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Getting Started
 
-## Expanding the ESLint configuration
+1. Clone the repository:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+   ```bash
+   git clone https://github.com/peaceabiodun/rapid-river-test.git
+   ```
 
-- Configure the top-level `parserOptions` property like this:
+2. Navigate to the project directory:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+   ```bash
+   cd rapid-river-test
+   ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+3. Install dependencies:
+
+   ```bash
+    yarn install
+   ```
+
+4. Start the development server:
+
+   ```bash
+    yarn dev
+   ```
+
+5. Open [http://localhost:5173](http://localhost:5173) with your browser to see the result.
+
+## Scripts Available
+
+In the project directory, you can run:
+
+### `yarn dev`
+
+Runs the app in the development mode.\
+
+### `yarn test`
+
+Runs the test suite.
+
+### `yarn build`
+
+Builds the app for production to the `dist` folder.
+
+## Tests
+
+This project uses [Vitest](https://vitest.dev/)
+
+## Thank you!

@@ -1,13 +1,13 @@
 export type ArticleFormDataType = {
-  snippet: string;
   name: string;
   email: string;
-  phone_number: string;
+  body: string;
 };
 
 export type ArticleType = {
-  userId: number;
+  postId: number;
   id: number;
-  title: string;
+  name: string;
+  email: string;
   body: string;
 };

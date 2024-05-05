@@ -1,8 +1,8 @@
-import '@testing-library/jest-dom';
-import '@testing-library/jest-dom/extend-expect';
-import { render, screen } from '@testing-library/react';
-import App from '../App';
+import { expect, test } from 'vitest';
 
-test('demo', () => {
-  expect(true).toBe(true);
+export function sum(a: number, b: number) {
+  return a + b;
+}
+test('adds 1 + 2 to equal 3', () => {
+  expect(sum(1, 2)).toBe(3);
 });
