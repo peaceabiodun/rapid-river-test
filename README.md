@@ -2,7 +2,8 @@
 
 To start this project, please ensure you have the following installed:
 
-- [Node.js](https://nodejs.org/) >= 18.0.0 [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
+- [Node.js](https://nodejs.org/) >= 18.0.0
+- [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
 
 ## Getting Started
 

@@ -28,11 +28,11 @@ const Results = () => {
   }, []);
 
   const filteredArticles = searchValue
-    ? articles.filter((article) => article.name.includes(searchValue) || article.body.includes(searchValue))
+    ? articles.filter((article) => article.name.includes(searchValue) || article.email.includes(searchValue))
     : articles;
   return (
-    <div className="bg-[#dbdbdbb0] min-h-screen p-4  ">
-      <h2 className="font-semibold text-xl text-center">Search for Articles</h2>
+    <div className="bg-[#e6f9fcb0] min-h-screen p-4  ">
+      <h2 className="font-semibold text-xl text-center text-blue-800">Search for Articles</h2>
 
       <div className="flex text-sm my-6 justify-center">
         <input
