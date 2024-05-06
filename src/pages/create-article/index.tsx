@@ -3,6 +3,7 @@ import { ArticleFormDataType } from '../../utils/types';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { generateRandomNumber } from '../../utils/function';
+import { FaLongArrowAltLeft } from 'react-icons/fa';
 
 const CreateArticle = () => {
   const navigate = useNavigate();
@@ -67,7 +68,8 @@ const CreateArticle = () => {
 
   return (
     <div className=" bg-[#e6f9fcb0] min-h-screen p-4 ">
-      <Link to={'/'} className="bg-white shadow-md p-2 text-sm ">
+      <Link to={'/'} className=" text-blue-500 shadow-md p-2 text-sm flex items-center gap-2 w-[200px] ">
+        <FaLongArrowAltLeft size={18} />
         Go Back
       </Link>
       <div className=" flex flex-col items-center justify-center mt-4 ">

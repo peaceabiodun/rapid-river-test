@@ -45,7 +45,7 @@ const Results = () => {
         <button className="border border-[#b9b9b9] p-2 ">Search</button>
       </div>
 
-      <button onClick={() => navigate('/create-article')} className="border shadow-md p-2 text-sm">
+      <button onClick={() => navigate('/create-article')} className="border shadow-md p-2 text-sm text-blue-500">
         Add Article
       </button>
 
